@@ -27,7 +27,7 @@ The app tracks your current and longest streak, last active date, a rolling 7-da
 If you choose to sign in with Sign In with Apple, the app stores your Apple-provided user ID, display name, and email address in the iOS Keychain on your device. Sign-in is optional — you can use ta-da without an account.
 
 ### 2.5 Subscription status
-Whether you hold a ta-da Pro subscription is recorded in local device storage so the app can unlock Pro features without a network call. No payment details are ever seen or stored by the app; all purchases are handled by the App Store.
+Whether you hold a Ta-Da Plus subscription is recorded in local device storage so the app can unlock Plus features without a network call. No payment details are ever seen or stored by the app; all purchases are handled by the App Store.
 
 ### 2.6 App preferences
 Theme selection, notification settings, and feature toggles are stored locally on your device.
