@@ -79,10 +79,10 @@
 <body>
   <header>
     <h1>Privacy Policy</h1>
-    <p class="meta">ta-da &mdash; Last updated: 1 May 2026</p>
+    <p class="meta">ta-da &mdash; Last updated: 18 July 2026</p>
   </header>
 
-  <p>Ta-da is a task management app for iOS. This policy explains what data the app collects, where it is stored, and how it is used. There are no hidden data practices &mdash; everything the app knows about you stays on your device or in your personal iCloud account.</p>
+  <p>Ta-da is a task-management and note-taking app for iOS. This policy explains what data the app collects, where it is stored, and how it is used. There are no hidden data practices &mdash; everything the app knows about you stays on your device or in your personal iCloud account, <strong>except the specific items you choose to share with family members you invite</strong> (see section 5, Family sharing).</p>
 
   <hr />
 
@@ -106,10 +106,13 @@
   <p>If you choose to sign in with Sign In with Apple, the app stores your Apple-provided user ID, display name, and email address in the iOS Keychain on your device. Sign-in is optional &mdash; you can use ta-da without an account.</p>
 
   <h3>2.5 Subscription status</h3>
-  <p>Whether you hold a Ta-Da Plus subscription is recorded in local device storage so the app can unlock Plus features without a network call. No payment details are ever seen or stored by the app; all purchases are handled by the App Store.</p>
+  <p>Whether you hold a Ta-Da! Together subscription is recorded in local device storage so the app can unlock Together features without a network call. No payment details are ever seen or stored by the app; all purchases are handled by the App Store.</p>
 
   <h3>2.6 App preferences</h3>
   <p>Theme selection, notification settings, and feature toggles are stored locally on your device.</p>
+
+  <h3>2.7 Notes and attachments</h3>
+  <p>Ta-da&rsquo;s notes feature stores the note text, handwriting/drawing, embedded photos, file attachments, links, folders, and tags you create. Photos, drawings, and file attachments are held in the app&rsquo;s local storage and, if iCloud is enabled, sync as CloudKit assets in your private database. Ta-da enforces a size limit on file attachments to keep sync efficient.</p>
 
   <hr />
 
@@ -125,53 +128,73 @@
   <hr />
 
   <h2>4. iCloud sync</h2>
-  <p>If you are signed in to iCloud on your device, ta-da stores your task data in a private CloudKit container (<code>iCloud.com.paul-ej.ta-da</code>). This container is accessible only to you &mdash; we cannot read your CloudKit data. Apple&rsquo;s iCloud terms of service govern how Apple stores and protects this data.</p>
+  <p>If you are signed in to iCloud on your device, ta-da stores your task and note data in a private CloudKit container (<code>iCloud.com.paul-ej.ta-da</code>). This container is accessible only to you &mdash; we cannot read your CloudKit data. Apple&rsquo;s iCloud terms of service govern how Apple stores and protects this data.</p>
   <p>You can disable iCloud sync in <strong>Settings &rarr; [your name] &rarr; iCloud &rarr; ta-da</strong>.</p>
 
   <hr />
 
-  <h2>5. Widgets and Siri</h2>
+  <h2>5. Family sharing &mdash; Ta-Da! Together (optional)</h2>
+  <p>Ta-Da! Together, part of the subscription, lets you share tasks with family members. It is <strong>off by default</strong> and only ever shares the specific items you choose. It is the one feature where data leaves your private space and becomes visible to other people &mdash; the people you invite.</p>
+  <p><strong>What is shared.</strong> When you assign or share a task, that task&rsquo;s content (its title, notes, and location) is mirrored into a shared household area in your private iCloud account using Apple&rsquo;s CloudKit sharing (<code>CKShare</code>). Invited members who accept see those shared tasks in their own copy of the app. If you use the &ldquo;cheer&rdquo; and shared-rhythm features, a cheer message and a presence signal (your display name and which recent days you were active) are shared with household members too.</p>
+  <p><strong>Inviting members.</strong> Invitations are sent as a standard iCloud share link through Apple&rsquo;s system share sheet (for example via Messages or Mail). We do not run any invitation server.</p>
+  <p><strong>Choosing who to assign.</strong> When you assign a task to someone, ta-da uses Apple&rsquo;s system contact picker. This picker runs outside the app, so <strong>ta-da does not request access to your Contacts</strong> and cannot browse your address book. Only the single contact you pick is returned to the app &mdash; their name, one email or phone handle, and their contact photo (used to show an avatar). This is stored with the task so the assignment can sync.</p>
+  <p><strong>What others can see.</strong> Members you invite can see the tasks you share into the household and the cheer/rhythm signals described above. They cannot see your other tasks, notes, focus sessions, or any data you have not shared. You can stop sharing or leave a shared household, which removes the shared copy from your device.</p>
+
+  <hr />
+
+  <h2>6. Link previews</h2>
+  <p>When you add a link to a note, ta-da uses Apple&rsquo;s Link Presentation framework to fetch a rich preview (title and icon). This contacts <strong>only the URL you entered</strong>, directly from your device. No other browsing data is collected, and the preview request is not routed through us.</p>
+
+  <hr />
+
+  <h2>7. Widgets and Siri</h2>
   <p>Ta-da shares a summary of your streak count, completed tasks, open tasks, and next task with its home screen widget via an iOS app group. This data never leaves your device.</p>
   <p>If you use Siri Shortcuts to create tasks by voice, your spoken input is processed by Apple&rsquo;s on-device speech recognition. Ta-da only receives the resulting text; it does not record or retain audio.</p>
 
   <hr />
 
-  <h2>6. Apple Music (optional)</h2>
+  <h2>8. Apple Music (optional)</h2>
   <p>If you choose to play Apple Music during a focus session, ta-da requests playback permission. The app does not access your library metadata, listening history, or account details &mdash; it only starts and stops playback.</p>
 
   <hr />
 
-  <h2>7. Analytics and advertising</h2>
+  <h2>9. Analytics and advertising</h2>
   <p>Ta-da contains <strong>no analytics SDKs, no advertising SDKs, and no crash-reporting services</strong>. No usage data, device identifiers, or behavioural signals are collected or sent anywhere.</p>
 
   <hr />
 
-  <h2>8. Third parties</h2>
-  <p>Ta-da does not share your data with any third parties. The only external services involved are Apple&rsquo;s own platforms (iCloud, the App Store, Apple Health, Apple Music, Siri) and your interactions with those are governed by Apple&rsquo;s privacy policy.</p>
+  <h2>10. Third parties</h2>
+  <p>Ta-da does not sell your data or share it with any third-party advertisers or data brokers. The only external services involved are:</p>
+  <ul>
+    <li><strong>Apple&rsquo;s own platforms</strong> &mdash; iCloud and CloudKit (including CloudKit sharing for Ta-Da! Together), the App Store, Apple Health, Apple Music, Siri, and the system share sheet used to send invitations. Your interactions with these are governed by Apple&rsquo;s privacy policy.</li>
+    <li><strong>Family members you invite</strong> &mdash; who receive the specific shared items described in section 5.</li>
+    <li><strong>A website you link to</strong> &mdash; which receives a request only when you add its URL to a note (section 6).</li>
+  </ul>
 
   <hr />
 
-  <h2>9. Data retention and deletion</h2>
+  <h2>11. Data retention and deletion</h2>
   <p>All data is stored on your device and, if enabled, in your personal iCloud account. To delete everything:</p>
   <ol>
     <li>Delete the app from your device &mdash; this removes local data and Keychain entries.</li>
     <li>To remove iCloud data, go to <strong>Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Account Storage</strong>, find ta-da, and delete its data.</li>
+    <li>To stop sharing with family, remove assignments or leave the shared household inside the app; this removes the shared copies on your device. Content already delivered to a member&rsquo;s device remains under their control.</li>
   </ol>
   <p>We have no copy of your data and cannot delete it on your behalf.</p>
 
   <hr />
 
-  <h2>10. Children</h2>
-  <p>Ta-da is not directed at children under 13 and we do not knowingly collect data from children. Because no data leaves the device or personal iCloud account, the app&rsquo;s data practices are the same regardless of age.</p>
+  <h2>12. Children</h2>
+  <p>Ta-da is not directed at children under 13 and we do not knowingly collect data from children. Because no data leaves the device or personal iCloud account without your explicit action, the app&rsquo;s data practices are the same regardless of age.</p>
 
   <hr />
 
-  <h2>11. Changes to this policy</h2>
+  <h2>13. Changes to this policy</h2>
   <p>If we make material changes to this policy we will update the &ldquo;Last updated&rdquo; date at the top and, where possible, notify you through the app. Continued use of ta-da after a change constitutes acceptance of the updated policy.</p>
 
   <hr />
 
-  <h2>12. Contact</h2>
+  <h2>14. Contact</h2>
   <p>Questions or requests: <a href="mailto:paulrobinjones@gmail.com">paulrobinjones@gmail.com</a></p>
 </body>
 </html>

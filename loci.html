@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Loci</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 2rem 1.25rem 4rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #e8e8e8; }
+      a { color: #6db3f2; }
+      hr { border-color: #333; }
+    }
+
+    header { margin-bottom: 2.5rem; }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.35rem;
+    }
+
+    .meta { font-size: 0.9rem; color: #666; }
+    @media (prefers-color-scheme: dark) { .meta { color: #999; } }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 2.25rem 0 0.6rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.4rem;
+    }
+
+    p { margin-bottom: 0.9rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ol, ul {
+      margin: 0.5rem 0 0.9rem 1.4rem;
+    }
+
+    li { margin-bottom: 0.3rem; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 2rem 0;
+    }
+
+    a { color: #0070c9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    code {
+      font-family: "SF Mono", ui-monospace, monospace;
+      font-size: 0.85em;
+      background: #f4f4f4;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    @media (prefers-color-scheme: dark) { code { background: #2a2a2a; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Loci &mdash; Last updated: 18 July 2026</p>
+  </header>
+
+  <p>Loci is a privacy-first, Apple-native notes and &ldquo;second brain&rdquo; app for iPhone, iPad, Mac, and Apple Watch. This policy explains what data the app stores, where it is stored, and how it is processed. The guiding principle is simple: <strong>your notes stay on your device, and in your personal iCloud account, unless you explicitly choose otherwise.</strong> Loci does not operate a note-storage or user-account server.</p>
+
+  <hr />
+
+  <h2>1. Who we are</h2>
+  <p>Loci is developed and published by Paul Edmondson-Jones. If you have questions about this policy you can reach us at <a href="mailto:paulrobinjones@gmail.com">paulrobinjones@gmail.com</a>.</p>
+
+  <hr />
+
+  <h2>2. On-device by default</h2>
+  <p>Every core feature of Loci works with zero network access. Editing, import parsing, OCR, on-device transcription, search, and indexing all run locally on your device. On-device is the default path, not a premium fallback. Nothing about your note content is sent anywhere unless a specific, clearly surfaced feature requires it and you have opted in.</p>
+
+  <hr />
+
+  <h2>3. Data the app stores</h2>
+
+  <h3>3.1 Your notes and content</h3>
+  <p>Loci stores the notes, pages, blocks, folders, collections, tasks, templates, meetings, and attachments you create inside the app in its local SwiftData store. This content belongs to you. It is never sent to our servers &mdash; we do not operate any.</p>
+
+  <h3>3.2 Derived AI data (local-only)</h3>
+  <p>To power on-device intelligence, Loci generates derived data such as AI digests and text embeddings. This data is kept in a <strong>separate, local-only store that never syncs and never leaves the device.</strong> It is regenerable, is never treated as the source of truth, and can be rebuilt from your notes at any time.</p>
+
+  <h3>3.3 App preferences</h3>
+  <p>Theme selection, feature toggles, your chosen intelligence mode, and similar settings are stored locally on your device.</p>
+
+  <hr />
+
+  <h2>4. AI features and where they run</h2>
+  <p>Loci uses a tiered inference system, ordered most-private first. The default intelligence mode is <strong>on-device only</strong>, and the app never crosses the &ldquo;leaves device&rdquo; line without a matching permission you have granted.</p>
+  <ul>
+    <li><strong>On-device (default).</strong> Baseline AI &mdash; capture, linking, search, summarising, ask-your-notes, OCR, scanning, and transcription &mdash; runs entirely on your device. No badge is shown, because nothing left the device.</li>
+    <li><strong>Apple Private Cloud Compute (optional, Loci+).</strong> For heavier requests you may opt in to Apple&rsquo;s Private Cloud Compute. When a request is processed this way, the app shows a <strong>blue</strong> tier badge so you know data left the device. This is opt-in and surfaced, never silent.</li>
+    <li><strong>Third-party models (optional, Loci+).</strong> You may connect third-party model providers. When a request is processed by a third party, the app shows an <strong>amber</strong> tier badge. This is opt-in and surfaced. Any data sent is governed by that provider&rsquo;s own privacy policy.</li>
+    <li><strong>Bring-your-own local models (Loci+).</strong> You can load your own local models, which run on your device.</li>
+  </ul>
+  <p>Tier badges always reflect the tier that <em>actually</em> processed the request, never the one requested.</p>
+
+  <hr />
+
+  <h2>5. iCloud sync and encryption</h2>
+  <p>If you enable iCloud, Apple CloudKit synchronizes your notes through <strong>your private CloudKit database</strong> in the container <code>iCloud.com.paul-ej.loci</code>. This database is accessible only to you &mdash; we cannot read it.</p>
+  <p>Loci marks your content fields (such as note titles, page and block text, folder and collection names, template contents, attachment filenames, and meeting titles) for on-device CloudKit encryption, so those values are encrypted before upload. Attachment bytes, transcripts, and meeting artefacts are stored as encrypted CloudKit assets.</p>
+  <p>Some sync metadata &mdash; record identifiers, relationships, ordering, and timestamps &mdash; remains readable by CloudKit because it is needed to synchronize your data across devices.</p>
+  <p><strong>End-to-end encryption depends on your Apple Account settings.</strong> When you enable Apple&rsquo;s Advanced Data Protection for iCloud, your encrypted fields and assets become end-to-end encrypted, with keys available only to you. Loci does not claim that ordinary iCloud sync is automatically end-to-end encrypted.</p>
+  <p>You can manage or disable iCloud sync using Apple&rsquo;s system iCloud controls.</p>
+
+  <hr />
+
+  <h2>6. Optional non-Apple storage backends</h2>
+  <p>Loci can optionally sync to a non-Apple destination &mdash; such as an iCloud Drive, Dropbox, Google Drive, OneDrive, or local folder (&ldquo;vault&rdquo;). When you use one of these, <strong>client-side encryption is on by default</strong>: your data is encrypted on-device with keys held in your device Keychain (or an optional passphrase), and the provider sees only ciphertext. Encryption keys never sync to the provider.</p>
+
+  <hr />
+
+  <h2>7. Web capture</h2>
+  <p>If you capture a web page, Loci contacts <strong>only the URL you explicitly submit</strong>. No other browsing data is collected or sent.</p>
+
+  <hr />
+
+  <h2>8. GitHub integration (optional)</h2>
+  <p>If you connect GitHub, Loci talks to GitHub directly after you complete a read-only GitHub App authorization. GitHub credentials are stored in your device Keychain. Any repository source index Loci builds is a bounded, locally-derived cache that is excluded from backup. Disconnecting GitHub removes its credential and its repository cache.</p>
+
+  <hr />
+
+  <h2>9. Agent and third-party LLM connections (optional, Loci+)</h2>
+  <p>Loci can expose a local read endpoint that lets an external tool or model query your notes. This is <strong>off by default.</strong> When enabled, each connection is bound to the local loopback interface, individually scoped, authenticated with a bearer token, and revocable at any time. Connection activity is audited locally <strong>without recording note content</strong>, and credentials are stored in your device Keychain. Revoking a connection invalidates its credential.</p>
+
+  <hr />
+
+  <h2>10. Widgets, Apple Watch, and Share Extension</h2>
+  <p>Loci&rsquo;s home-screen widgets, watch app, watch complications, and share extension read from a shared on-device app group (<code>group.com.paul-ej.loci</code>). Data shared this way stays on your device. The share extension queues incoming content into the app group for the main app to process.</p>
+
+  <hr />
+
+  <h2>11. Subscriptions</h2>
+  <p>Loci is free to use, including all baseline on-device AI. <strong>Loci+</strong> is an optional auto-renewable subscription that unlocks additional capabilities (Apple Private Cloud Compute, bring-your-own local models, vault-scale AI, automations, and the third-party connection endpoint). All purchases are handled by the App Store through StoreKit. Loci never sees or stores your payment details.</p>
+
+  <hr />
+
+  <h2>12. Analytics and advertising</h2>
+  <p>Loci contains <strong>no advertising SDK, no cross-app tracking, no third-party analytics, and no crash-reporting service.</strong> No usage data, device identifiers, or behavioural signals are collected or sent to us or to any third party.</p>
+
+  <hr />
+
+  <h2>13. Third parties</h2>
+  <p>Loci does not share your data with any third parties of its own accord. The only external services involved are Apple&rsquo;s own platforms (iCloud, the App Store, Apple Private Cloud Compute) and any service <strong>you</strong> explicitly connect &mdash; a non-Apple storage provider, GitHub, or a third-party model provider. Your use of those services is governed by their respective privacy policies.</p>
+
+  <hr />
+
+  <h2>14. Data retention, export, and deletion</h2>
+  <p>Your notes remain until you permanently remove them from the Recycle Bin. You can export your data as Markdown, PDF, and attachment packages at any time. iCloud data can also be managed with Apple&rsquo;s system iCloud controls. Uninstalling the app removes the device-local containers through the platform&rsquo;s normal processes.</p>
+  <p>We have no copy of your notes and cannot delete them on your behalf.</p>
+
+  <hr />
+
+  <h2>15. Children</h2>
+  <p>Loci is not directed at children under 13 and we do not knowingly collect data from children. Because your data stays on your device and in your personal iCloud account, the app&rsquo;s data practices are the same regardless of age.</p>
+
+  <hr />
+
+  <h2>16. Changes to this policy</h2>
+  <p>If we make material changes to this policy we will update the &ldquo;Last updated&rdquo; date at the top and, where possible, notify you through the app. Continued use of Loci after a change constitutes acceptance of the updated policy.</p>
+
+  <hr />
+
+  <h2>17. Contact</h2>
+  <p>Questions or requests: <a href="mailto:paulrobinjones@gmail.com">paulrobinjones@gmail.com</a></p>
+</body>
+</html>
