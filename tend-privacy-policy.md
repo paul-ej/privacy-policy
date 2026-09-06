@@ -2,13 +2,13 @@
 
 **Last updated: 6 September 2026**
 
-Tend is designed to be private by default. It does not collect, monitor, or profile you. The information you create in Tend is unique to you and stays on your device, with optional synchronization through your personal iCloud account.
+Tend is designed to be private by default. It does not collect, monitor, or profile you. The information you create in Tend is unique to you and stays on your device, with optional synchronization through your Apple account.
 
 ---
 
 ## 1. Who we are
 
-Tend is developed and published by Paul Edmondson-Jones. If you have questions about this policy, contact us at paulrobinjones@gmail.com.
+Tend is developed and published by Paul Edmondson-Jones. If you have questions about this policy, contact us at hello@paul-ej.dev
 
 ---
 
@@ -66,4 +66,4 @@ If this policy changes, we will update the "Last updated" date above. Any future
 
 ## 9. Contact
 
-Questions about this policy: **paulrobinjones@gmail.com**
+Questions about this policy: **hello@paul-ej.dev**
